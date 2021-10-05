@@ -34,4 +34,5 @@ root                    (project root folder)
 
 ## Authors
 ---
-* TODO: Add your name and email here
+* Larry Copeland 
+  Email - cop21004@byui.edu
