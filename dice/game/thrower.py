@@ -13,28 +13,57 @@ class Thrower:
     
     """
 
-    dice = []
-    num_throws = 0
-
     def __init__(self):
+        """
+        
+        Attributes:
+            dice (list): Hold the dice value for each throw
+            num_throws (number): Keeps track of the number of throws in the game
+        """
 
-
-
-
-        self.can_throw = True
-        self.get_points()
-        self.throw_dice()
-
+        self.dice = []
+        self.num_throws = 0
 
 
     def get_points(self):
-        pass
+        
+        score = 0
+
+        for i in self.dice:
+            if i == 1:
+                score += 100
+            if i == 5:
+                score += 50
+            
+        return score
+
+
 
 
     def throw_dice(self):
-        pass
+        """
+        throw_dice method controls and records the throw of the dice
+        
+        """
+        
+        self.dice.clear() # clears last throw
+        for i in range(5):# for loop to get 5 numbers between 1-5
+            die = random.randint(1, 6)
+            self.dice.append(die) #append die to dice list
+
+        self.num_throws +=1 # add one to the num_throws counter
 
     
 
-    def num_throws(self):
-        pass
+    def can_throw(self):
+        """
+        can_throw method checks if the thrower gets another turn if the previous
+                    throw had a 5 or a 1 or if the num_throws is 0. 
+
+        """
+
+        for i in self.dice:
+            if 5 in self.dice or 1 in self.dice or (self.num_throws == 0):
+                return True
+            else:
+                return False
