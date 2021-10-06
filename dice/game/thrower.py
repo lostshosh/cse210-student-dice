@@ -26,6 +26,13 @@ class Thrower:
 
 
     def get_points(self):
+        """
+        get_points evaluates the throw then calculates the score and return it to the total
+
+        "1" are worth 100 points
+        "5" are worht 50 points
+        
+        """
         
         score = 0
 
