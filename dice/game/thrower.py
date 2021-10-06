@@ -13,33 +13,6 @@ class Thrower:
     
     """
 
-<<<<<<< HEAD
-    dice = []
-    num_throws = 0
-
-    def __init__(self):
-
-
-
-
-        self.can_throw = True
-        self.get_points()
-        self.throw_dice()
-
-
-
-    def get_points(self):
-        pass
-
-
-    def throw_dice(self):
-        pass
-
-    
-
-    def num_throws(self):
-        pass
-=======
     def __init__(self):
         """
         
@@ -101,4 +74,3 @@ class Thrower:
                 return True
             else:
                 return False
->>>>>>> 2663ed3d3721ad29c6ebd7d3df49cba088e6a506
